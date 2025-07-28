@@ -2,10 +2,13 @@
 """com.py
 """
 import sys
-import time
 import threading
+import time
+
 import click
 import serial
+
+VERSION = '0.0.1'
 
 stop_event = threading.Event()
 
@@ -44,11 +47,7 @@ def safe_serial_write(conn, data, retries=10):
 
 
 @click.command()
-@click.option('-D',
-              '--device',
-              type=str,
-              default='/dev/ttyUSB0',
-              help='serial device')
+@click.option('-D', '--device', required=True, type=str, help='serial device')
 @click.option('-b', '--baudrate', type=int, default=460800, help='baudrate')
 @click.option('-t',
               '--timeout',
