@@ -8,7 +8,7 @@ import time
 import click
 import serial
 
-VERSION = '0.0.1'
+VERSION = '0.0.2'
 
 stop_event = threading.Event()
 
