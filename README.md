@@ -1,12 +1,12 @@
 # whl-com
 
-## Usage
-
-before using this tool, make sure you have installed required packages:
+## Installation
 
 ```bash
-pip install -r requirements.txt
+pip install whl-com
 ```
+
+## Usage
 
 ### send single command
 
